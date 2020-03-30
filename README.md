@@ -61,3 +61,21 @@ In our case, aws-role is the role directory which we created and this role direc
         └── main.yml
 
 ```
+**Ansible Vault for AWS Credentials**
+
+Ansible Vault is a feature of ansible that allows you to keep sensitive data such as passwords or keys in encrypted files, rather than as plaintext in playbooks or roles. These vault files can then be distributed or placed in source control.
+
+Steps for creating Ansible-Vault file:
+
+- Create a vault credentials file named <filename.yml> using the command 'ansible-vault create <filename.yml>'
+- Enter a password for the vaultfile we created.
+- Don't forgot to note down the password, we need the password to run our playbook file.
+
+- Insert AWS Credentials into the file.The file be like;
+```bash
+---
+VAULT_AWS_ACCESS_KEY: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+VAULT_AWS_SECRET_KEY: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+
