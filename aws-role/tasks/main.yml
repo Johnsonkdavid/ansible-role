@@ -1,0 +1,8 @@
+---
+# tasks file for aws_role
+- include_vars:
+    file: creds.yml
+- include_tasks: launchcnf.yml
+- include_tasks: targetgp.yml  
+- include_tasks: loadbalancer.yml
+- include_tasks: asgcnf.yml

@@ -1,0 +1,7 @@
+---
+- name: Ec2 provisioning
+  hosts: localhost
+  gather_facts: true
+  connection: local
+  roles:
+    - aws-role

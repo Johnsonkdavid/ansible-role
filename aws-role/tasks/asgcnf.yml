@@ -1,0 +1,20 @@
+---
+- name: Provision new Auto Scaling Group 
+  ec2_asg:
+    aws_access_key: '{{ VAULT_AWS_ACCESS_KEY }}'
+    aws_secret_key: '{{ VAULT_AWS_SECRET_KEY }}'  
+    name: Infinity-app-asg
+    launch_config_name: Infinity-app-lc
+    region: us-east-1   
+    health_check_type: EC2
+    health_check_period: 300
+    desired_capacity: 1
+    min_size: 1
+    max_size: 2
+    state: present
+    wait_for_instances: no
+    target_group_arns: "{{tg.target_group_arn}}"
+    tags:
+      - environment: production
+
+  register: asg_out  

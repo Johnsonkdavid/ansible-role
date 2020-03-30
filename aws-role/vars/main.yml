@@ -1,0 +1,10 @@
+---
+# vars file for aws_role
+
+ec2_instance_type: "t2.micro"
+ec2_image: "ami-xxxxxxxxxxxxxxxx"
+ec2_region: "us-east-1"
+ec2_key_name: "your-key-pair"
+ec2_group_id: "sg-xxxxxxxxxxxx"
+ec2_tags_name: "xxxxx"
+ec2_env_name: "xxx"
